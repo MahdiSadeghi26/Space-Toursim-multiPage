@@ -1,9 +1,22 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [],
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
+    fontFamily:{
+      'BarlowLight':["'BarlowCondensed-Light'"],
+      'BarlowMedium':["'BarlowCondensed-Medium'"],
+      'BarlowRegular':["'BarlowCondensed-Regular'"],
+      'BarlowSemiBold':["'BarlowCondensed-SemiBold'"],
+      'BellefairRegular':["'Bellefair-Regular'"],
+
+    },
     extend: {},
+    colors:{
+      'lightPurple':'#d0d6f9'
+    }
   },
   plugins: [],
 }
-
