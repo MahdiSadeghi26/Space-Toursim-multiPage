@@ -4,7 +4,7 @@
         <div class="px-2  w-1/2 h-full flex item-center  justify-center ">
             <!-- secondary  -->
             <div class="flex flex-col   items-center justify-center w-full">
-                <p class=" text-lightPurple uppercase font-BarlowRegular text-3xl tracking-widest xl:w-1/2 mb-5 lg:w-2/3  ">
+                <p class=" text-lightPurple uppercase font-BarlowRegular lg:text-3xl text-2xl tracking-widest xl:w-1/2 mb-5 lg:w-2/3  ">
                     so, you
                     want travel to
                 </p>
