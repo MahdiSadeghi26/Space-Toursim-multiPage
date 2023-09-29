@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navItem {
+  @apply  mx-5 cursor-pointer h-full px-5 tracking-widest
+    flex items-center hover:border-gray-200 hover:border-b-2  ;
+}
+.activeItem {
+  @apply border-white border-b-[1px];
+}
