@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .navItem {
-  @apply  mx-5 cursor-pointer h-full px-5 tracking-widest
-    flex items-center hover:border-gray-200 hover:border-b-2  ;
+  @apply xl:mx-5 cursor-pointer h-full px-5 lg:px-1 lg:w-full xl:w-auto tracking-widest
+    flex items-center hover:border-gray-400 hover:border-b-[1px] justify-center ;
 }
 .activeItem {
   @apply border-white border-b-[1px];
