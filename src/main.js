@@ -1,5 +1,7 @@
 import '@/assets/defineFonts.scss'
 import '@/style.css'
+import 'animate.css';
+
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
