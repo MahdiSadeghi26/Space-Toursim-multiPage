@@ -12,19 +12,17 @@ let mobileTrigedFlag = ref(false)
                 <img src="/images/shared/logo.svg" alt="logo" class="inline ml-5">
                 <hr class=" border-white border-opacity-25 inline-block lg:w-10/12">
             </div>
-            <ul class=" lg:h-[100px] xl:w-1/2 xl:justify-evenly lg:justify-around lg:w-3/5  lg:flex  font-BarlowRegular lg:text-lg hidden">
-                <li class="navItem" :class="{ activeItem: route.path == '/' }">
-                    00 HOME
-                </li>
-                <li class="navItem" :class="{ activeItem: route.path == '/destention' }">
-                    01 DESTENTION
-                </li>
-                <li class="navItem" :class="{ activeItem: route.path == '/crew' }">
-                    02 CREW
-                </li>
-                <li class="navItem " :class="{ activeItem: route.path == '/technology' }">
-                    03 TECHNOLOGY
-                </li>
+            <ul
+                class=" lg:h-[100px] xl:w-1/2 xl:justify-evenly lg:justify-around lg:w-3/5  lg:flex  font-BarlowRegular lg:text-lg hidden">
+                <RouterLink class="navItem" :to="{ name: 'Home' }" :class="{ activeItem: route.path == '/' }">00 HOME
+                </RouterLink>
+                <router-link class="navItem" :to="{ name: 'destination' }"
+                    :class="{ activeItem: route.path == '/destination' }">01 DESTENTION</router-link>
+                <router-link class="navItem" :to="{ name: 'crew' }" :class="{ activeItem: route.path == '/crew' }">02
+                    CREW</router-link>
+                <router-link class="navItem" :to="{ name: 'technology' }" :class="{ activeItem: route.path == '/technology' }">
+                    03 TECHNOLOGY</router-link>
+
             </ul>
             <!-- icon and logo in mobile -->
             <div class="lg:hidden flex justify-between px-6 items-center w-screen h-[50px]">
@@ -47,7 +45,7 @@ let mobileTrigedFlag = ref(false)
                     <li class="navItem" :class="{ activeItem: route.path == '/' }">
                         00 HOME
                     </li>
-                    <li class="navItem" :class="{ activeItem: route.path == '/destention' }">
+                    <li class="navItem" :class="{ activeItem: route.path == '/destination' }">
                         01 DESTENTION
                     </li>
                     <li class="navItem" :class="{ activeItem: route.path == '/crew' }">
@@ -59,6 +57,7 @@ let mobileTrigedFlag = ref(false)
                 </ul>
             </Transition>
         </nav>
+        <RouterView />
     </header>
 </template>
 
