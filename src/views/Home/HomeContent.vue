@@ -25,11 +25,10 @@
         </div>
         <!-- explore button -->
         <div class="w-1/2 flex lg:items-center justify-center items-center lg:h-auto md:h-[350px] h-[250px] ">
-            <div
-                class="bg-white rounded-full xl:w-[250px] xl:h-[250px] lg:w-[200px] lg:h-[200px]
+            
+                <router-link class=" uppercase lg:text-4xl md:text-3xl font-BellefairRegular bg-white rounded-full xl:w-[250px] xl:h-[250px] lg:w-[200px] lg:h-[200px]
                  md:w-[170px] md:h-[170px] w-[150px] h-[150px] flex items-center justify-center outline-0 outline-gray-400 hover:outline-[40px] 
-                 outline transition-all hover:duration-500">
-                <a href="" class=" uppercase lg:text-4xl md:text-3xl font-BellefairRegular ">explore</a>
-            </div>
+                 outline transition-all hover:duration-500" :to="{name : 'destination'}">explore</router-link>
+           
         </div>
 </div></template>
