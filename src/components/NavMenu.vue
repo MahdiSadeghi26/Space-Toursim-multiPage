@@ -6,21 +6,22 @@ let mobileTrigedFlag = ref(false)
 </script>
 <template>
     <header class="w-screen text-slate-50   lg:h-[100px]">
-        <nav class="flex justify-between items-center backdrop-blur-[30px]">
+        <nav class="flex justify-between items-center pt-7 ">
             <!-- logo -->
-            <div class="w-1/2 lg:flex hidden  justify-evenly items-center ">
-                <img src="/images/shared/logo.svg" alt="logo" class="inline ml-5">
-                <hr class=" border-white border-opacity-25 inline-block lg:w-10/12">
+            <div class="w-[60%] lg:flex hidden  justify-between items-center ">
+                <img src="/images/shared/logo.svg" alt="logo" class="inline ml-8 ">
             </div>
+            <hr class=" border-white border-opacity-25 left-[100px] xl:w-[55%]  absolute z-20">
             <ul
-                class=" lg:h-[100px] xl:w-1/2 xl:justify-evenly lg:justify-around lg:w-3/5  lg:flex  font-BarlowRegular lg:text-lg hidden">
+                class="shadow-[0px_0px_28px_-1px_rgba(0,0,0,0.75)] lg:h-[100px] xl:w-[45%] xl:justify-center lg:justify-around lg:w-3/5  lg:flex  font-BarlowRegular lg:text-lg hidden backdrop-blur-[30px] bg-[hsla(0,0%,100%,.05)] z-10">
                 <RouterLink class="navItem" :to="{ name: 'Home' }" :class="{ activeItem: route.path == '/' }">00 HOME
                 </RouterLink>
                 <router-link class="navItem" :to="{ name: 'destination' }"
                     :class="{ activeItem: route.path == '/destination' }">01 DESTENTION</router-link>
                 <router-link class="navItem" :to="{ name: 'crew' }" :class="{ activeItem: route.path == '/crew' }">02
                     CREW</router-link>
-                <router-link class="navItem" :to="{ name: 'technology' }" :class="{ activeItem: route.path == '/technology' }">
+                <router-link class="navItem" :to="{ name: 'technology' }"
+                    :class="{ activeItem: route.path == '/technology' }">
                     03 TECHNOLOGY</router-link>
 
             </ul>
