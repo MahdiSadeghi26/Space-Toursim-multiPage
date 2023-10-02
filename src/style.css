@@ -15,3 +15,9 @@
 .activePlant {
   @apply border-white border-b-2;
 }
+.crewButton{
+  @apply rounded-full w-[15px] h-[15px] bg-white bg-opacity-50
+}
+.crewButtonActive{
+  @apply bg-white bg-opacity-100 w-[18px] h-[18px]
+}
