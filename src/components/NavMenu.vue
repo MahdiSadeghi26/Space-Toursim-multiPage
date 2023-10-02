@@ -43,18 +43,15 @@ let mobileTrigedFlag = ref(false)
                 leave-active-class="animate__animated animate__slideOutRight">
                 <ul v-show="mobileTrigedFlag"
                     class=" flex flex-col items-center justify-between h-[200px] font-BarlowMedium absolute right-0 top-[50px] backdrop-blur-3xl  bg-[rgba(255,255,255,0.2)] rounded-lg lg:hidden ">
-                    <li class="navItem" :class="{ activeItem: route.path == '/' }">
-                        00 HOME
-                    </li>
-                    <li class="navItem" :class="{ activeItem: route.path == '/destination' }">
-                        01 DESTENTION
-                    </li>
-                    <li class="navItem" :class="{ activeItem: route.path == '/crew' }">
-                        02 CREW
-                    </li>
-                    <li class="navItem" :class="{ activeItem: route.path == '/technology' }">
-                        03 TECHNOLOGY
-                    </li>
+                    <RouterLink class="navItem" :to="{ name: 'Home' }" :class="{ activeItem: route.path == '/' }">00 HOME
+                </RouterLink>
+                <router-link class="navItem" :to="{ name: 'destination' }"
+                    :class="{ activeItem: route.path == '/destination' }">01 DESTENTION</router-link>
+                    <router-link class="navItem" :to="{ name: 'crew' }" :class="{ activeItem: route.path == '/crew' }">02
+                    CREW</router-link>
+                    <router-link class="navItem" :to="{ name: 'technology' }"
+                    :class="{ activeItem: route.path == '/technology' }">
+                    03 TECHNOLOGY</router-link>
                 </ul>
             </Transition>
         </nav>
