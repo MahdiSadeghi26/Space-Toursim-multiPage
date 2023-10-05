@@ -16,8 +16,8 @@
   @apply border-white border-b-2;
 }
 .crewButton{
-  @apply rounded-full w-[15px] h-[15px] bg-white bg-opacity-50
+  @apply rounded-full   xl:w-[17px] xl:h-[17px] lg:w-[15px] lg:h-[15px] bg-white bg-opacity-50 
 }
 .crewButtonActive{
-  @apply bg-white bg-opacity-100 w-[18px] h-[18px]
+  @apply bg-white bg-opacity-100  lg:w-[13px] lg:h-[13.5px]
 }
