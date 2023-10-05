@@ -11,9 +11,9 @@ let mobileTrigedFlag = ref(false)
             <div class="xl:w-[60%] lg:flex hidden  justify-between items-center ">
                 <img src="/images/shared/logo.svg" alt="logo" class="inline lg:ml-8 ">
             </div>
-            <hr class=" border-white border-opacity-25 left-[100px] xl:w-[55%] lg:w-[30%] absolute z-20">
+            <hr class=" border-white border-opacity-25 left-[100px] 2xl:w-[55%] xl:w-[42%] lg:w-[35%] absolute z-20">
             <ul
-                class="shadow-[0px_0px_28px_-1px_rgba(0,0,0,0.75)] lg:h-[100px] xl:w-[45%]  justify-center  lg:w-[70%]  lg:flex  font-BarlowRegular lg:text-lg hidden backdrop-blur-[30px] bg-[hsla(0,0%,100%,.05)] z-10">
+                class="shadow-[0px_0px_28px_-1px_rgba(0,0,0,0.75)] lg:h-[100px] 2xl:w-[45%]  justify-center  lg:w-[64%]  lg:flex  font-BarlowRegular lg:text-lg hidden backdrop-blur-[30px] bg-[hsla(0,0%,100%,.05)] z-10">
                 <RouterLink class="navItem" :to="{ name: 'Home' }" :class="{ activeItem: route.path == '/' }">00 HOME
                 </RouterLink>
                 <router-link class="navItem" :to="{ name: 'destination' }"
