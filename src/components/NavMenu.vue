@@ -42,7 +42,7 @@ let mobileTrigedFlag = ref(false)
             <Transition enter-active-class="animate__animated animate__slideInRight"
                 leave-active-class="animate__animated animate__slideOutRight">
                 <ul v-show="mobileTrigedFlag"
-                    class=" flex flex-col items-center justify-between h-[200px] font-BarlowMedium absolute right-0 top-[50px] backdrop-blur-3xl  bg-[rgba(255,255,255,0.2)] rounded-lg lg:hidden ">
+                    class=" flex flex-col items-center justify-between h-[250px] w-[200px] font-BarlowMedium absolute right-0 top-[70px] backdrop-blur-3xl  bg-[rgba(255,255,255,0.2)] rounded-lg lg:hidden ">
                     <RouterLink class="navItem" :to="{ name: 'Home' }" :class="{ activeItem: route.path == '/' }">00 HOME
                 </RouterLink>
                 <router-link class="navItem" :to="{ name: 'destination' }"
