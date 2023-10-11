@@ -10,7 +10,7 @@
   @apply border-white border-b-[1px];
 }
 .plantList {
-  @apply uppercase inline-block hover:border-gray-500 hover:border-b-2 cursor-pointer;
+  @apply uppercase inline-block hover:border-gray-500 hover:border-b-2 cursor-pointer py-2 ;
 }
 .activePlant {
   @apply border-white border-b-2;
