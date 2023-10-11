@@ -46,7 +46,7 @@ let activeData = computed(() => {
                 <transition appear enter-to-class="animate__animated animate__rotateIn"
                     enter-from-class="animate__animated animate__rotateIn">
                     <img ref="image" :src="`${activeData.image}`" alt="plant image"
-                        class="  xl:max-h-[445px]  xl:max-w-[445px] lg:max-h-[400px]  lg:max-w-[400px] md:max-w-[370px] md:max-h-[370px] max-h-[350px] max-w-[350px] ">
+                     :key="activePlant"    class="xl:max-h-[445px]  xl:max-w-[445px] lg:max-h-[400px]  lg:max-w-[400px] md:max-w-[370px] md:max-h-[370px] max-h-[350px] max-w-[350px] ">
                 </transition>
 
 
