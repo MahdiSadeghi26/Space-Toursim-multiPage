@@ -5,8 +5,8 @@ const route = useRoute()
 let mobileTrigedFlag = ref(false)
 </script>
 <template>
-    <header class="w-screen text-slate-50   lg:h-[100px]">
-        <nav class="flex justify-between items-center pt-7 ">
+    <header class="w-screen text-slate-50   lg:h-[100px] z-10">
+        <nav class="flex justify-between items-center pt-7">
             <!-- logo -->
             <div class="xl:w-[60%] lg:flex hidden  justify-between items-center ">
                 <img src="/images/shared/logo.svg" alt="logo" class="inline lg:ml-8 ">
@@ -27,7 +27,7 @@ let mobileTrigedFlag = ref(false)
             </ul>
             <!-- icon and logo in mobile -->
             <div class="lg:hidden flex justify-between px-6 items-center w-screen h-[50px]">
-                <img src="/images/shared/logo.svg" alt="logo" class="ml-5 h-[40px]">
+                <img src="/images/shared/logo.svg" alt="logo" class="md:ml-5 h-[40px]">
                 <transition leave-active-class="animate__animated animate__fadeOut"
                     enter-active-class="animate__animated `animate__fadeIn">
                     <i v-if="!mobileTrigedFlag" class="fa-solid fa-bars fa-2xl absolute right-8"
