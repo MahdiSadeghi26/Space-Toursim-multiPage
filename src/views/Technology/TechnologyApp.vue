@@ -29,8 +29,8 @@ let activeData = computed(() => {
             </p>
             <img :src="`${activeData.landscape}`" alt="landscape tech" class="lg:hidden mt-16 w-full">
             <!-- left text and slides -->
-            <transition appear enter-active-class="animate__animated animate__fadeIn">
-                <div class="xl:w-2/3 lg:w-11/12 flex lg:mt-0 mt-10">
+            
+                <div  class="xl:w-2/3 lg:w-11/12 flex lg:mt-0 mt-10">
                     <!-- button and text container -->
                     <div class="flex  w-full xl:h-[300px] lg:h-[300px] flex-col lg:flex-row  xl:gap-20 lg:gap-10 ">
                         <!-- buttons -->
@@ -43,13 +43,15 @@ let activeData = computed(() => {
                                 :class="{ techButtonActive: activeTech == 'space capsule' }" class="techButton">3</button>
                         </div>
                         <!-- title and text -->
-                        <div
+                        <transition appear enter-active-class="animate__animated animate__fadeIn">
+                        <div :key="activeTech"
                             class="xl:w-full flex  h-full lg:items-start items-center justify-center lg:gap-4 order-2  flex-col">
                             <p class="text-white text-opacity-50 text-xl font-BarlowRegular lg:mt-auto mt-5  uppercase">The
                                 terminology ...
                             </p>
                             <!-- title -->
-                            <p class="uppercase text-white xl:text-6xl lg:text-5xl md:text-4xl text-4xl font-BellefairRegular mt-5">
+                            <p
+                                class="uppercase text-white xl:text-6xl lg:text-5xl md:text-4xl text-4xl font-BellefairRegular mt-5">
                                 {{
                                     activeData.name }}</p>
                             <!-- caption -->
@@ -58,12 +60,12 @@ let activeData = computed(() => {
                                 {{ activeData.description }}
                             </p>
                         </div>
+                    </transition>
                     </div>
                 </div>
-            </transition>
             <!-- right (images) -->
             <transition appear enter-active-class="animate__animated animate__fadeIn">
-                <div class="lg:w-1/2">
+                <div :key="activeTech" class="lg:w-1/2">
                     <img :src="`${activeData.portrait}`" alt="space image" class="xl:w-11/12  lg:w-full lg:block  hidden">
                 </div>
             </transition>
