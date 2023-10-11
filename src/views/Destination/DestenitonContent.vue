@@ -43,7 +43,7 @@ let activeData = computed(() => {
                 <p class="uppercase text-white tracking-widest font-BarlowRegular md:text-3xl text-2xl"><span
                         class="text-gray-700 font-BarlowSemiBold font-bold mr-5 ">01</span>PICK YOUR DESTINATION</p>
 
-                <transition appear enter-to-class="animate__animated animate__rotateIn"
+                <transition appear enter-to-class="animate__animated animate__rotateIn animate__slow"
                     enter-from-class="animate__animated animate__rotateIn">
                     <img ref="image" :src="`${activeData.image}`" alt="plant image"
                      :key="activePlant"    class="xl:max-h-[445px]  xl:max-w-[445px] lg:max-h-[400px]  lg:max-w-[400px] md:max-w-[370px] md:max-h-[370px] max-h-[350px] max-w-[350px] ">
@@ -52,8 +52,8 @@ let activeData = computed(() => {
 
             </div>
             <!-- right (information) -->
-            <transition appear enter-active-class="animate__animated animate__fadeIn animate__slow">
-                <div class="lg:w-1/2 md:w-[400px] w-full py-16 flex flex-col lg:gap-10 gap-7  justify-center items-center ">
+           
+                <div :key="activePlant" class="lg:w-1/2 md:w-[400px] w-full py-16 flex flex-col lg:gap-10 gap-7  justify-center items-center ">
                     <!-- plants ul -->
                     <ul
                         class="flex w-11/12 lg:justify-start justify-center  tracking-widest text-lg gap-10 font-BarlowMedium text-lightPurple">
@@ -71,8 +71,9 @@ let activeData = computed(() => {
                             titan</li>
                     </ul>
                     <!-- informations -->
+                    <transition appear enter-active-class="animate__animated animate__fadeIn">
                     <div
-                        class="xl:w-[445px] lg:w-[440px] md:w-auto  w-full flex flex-col  justify-center lg:items-start items-center">
+                    class="xl:w-[445px] lg:w-[440px] md:w-auto  w-full flex flex-col  justify-center lg:items-start items-center">
                         <p ref="title"
                             class="uppercase text-white font-BellefairRegular xl:text-8xl lg:text-7xl md:text-6xl text-5xl mb-5">
                             {{
@@ -85,8 +86,11 @@ let activeData = computed(() => {
                             {{
                                 activeData.description }}</p>
                     </div>
+                </transition>
+                
                     <hr class=" border-opacity-25 border-white ">
                     <!-- destenition -->
+                    <transition appear enter-active-class="animate__animated animate__fadeIn">
                     <div class="flex w-full justify-between pr-10">
                         <!-- distance -->
                         <div class="flex flex-col gap-2">
@@ -95,6 +99,7 @@ let activeData = computed(() => {
                                 '384,400 km' ?
                                 activeData.distance : '' }}</p>
                         </div>
+                   
                         <!-- time -->
                         <div class="flex flex-col gap-2">
                             <p class=" font-BarlowRgular text-lightPurple tracking-wider text-sm uppercase">Est. travel time
@@ -104,8 +109,9 @@ let activeData = computed(() => {
 
                         </div>
                     </div>
+                </transition>
                 </div>
-            </transition>
+            
         </div>
 
     </div>
